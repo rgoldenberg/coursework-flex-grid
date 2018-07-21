@@ -16,6 +16,12 @@
     --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
 }
 
+$break-largest: 75em;    //1200px
+$break-large: 68.75em;   //1100px
+$break-medium: 56.25em;  //900px
+$break-small: 37.5em;    //600px
+$break-smallest: 31.25em;    //500px
+
 * {
     margin: 0;
     padding: 0;
@@ -31,6 +37,10 @@ html {
     box-sizing: border-box; 
     // 10px == 1rem
     font-size: 62.5%;
+
+    @media only screen and (max-width: $break-large) {
+        font-size: 50%;
+    }
 }
 
 body {
