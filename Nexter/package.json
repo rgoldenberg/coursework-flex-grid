@@ -4,15 +4,15 @@
   "description": "Nexter webpage",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss css/style.css -w",
-    "devserver": "live-server",
+    "watch:sass": "node-sass sass/main.scss css/compiled/style.css -w",
+    "devserver": "live-server --browser=firefox",
     "start": "npm-run-all --parallel devserver watch:sass",
     "compile:sass": "node-sass sass/main.scss css/compiled/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/compiled/style.comp.css -o css/compiled/style.prefix.css",
     "compress:css": "node-sass css/compiled/style.prefix.css css/compiled/style.css --output-style compressed",
     "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
-  "author": "Jonas",
+  "author": "rbgoldenberg",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^7.1.4",
