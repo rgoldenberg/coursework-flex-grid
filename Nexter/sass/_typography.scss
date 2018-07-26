@@ -9,21 +9,47 @@
 
 .heading-2 {
     @extend %heading;
+    font-size: 4rem;
+    line-height: 1;
+    font-style: italic;
+
+    &--light { color: $color-grey-light-1; }
+    &--dark { color: $color-grey-dark-1; }
 }
 
 .heading-3 {
     @extend %heading;
+    font-size: 1.6rem;
+    color: $color-primary;
+    text-transform: uppercase;
 }
 
 .heading-4 {
     @extend %heading;
     font-size: 1.9rem;
 
-    &--light {
-        color: $color-grey-light-1;
-    }
+    &--light { color: $color-grey-light-1; }
+    &--dark { color: $color-grey-dark-1; }
+}
 
-    &--dark {
-        color: $color-grey-dark-1;
+.margin-bottom-s { margin-bottom: 2rem; }
+.margin-bottom-m { margin-bottom: 3rem; }
+.margin-bottom-l { margin-bottom: 4rem; }
+.margin-bottom-xl { margin-bottom: 8rem; }
+
+.btn {
+    background-color: $color-primary;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+    text-transform: uppercase;
+    padding: 1.8rem 3rem;
+    font-family: $font-display;
+    font-size: 1.5rem;
+    transition: all .2s;
+
+    &:hover {
+        background-color: $color-primary-dark;
     }
 }
