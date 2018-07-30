@@ -9,12 +9,24 @@
     justify-content: center;
     justify-items: center;
 
+    @media only screen and (max-width: $break-m) {
+        grid-column: 1 / -1;
+    }
+
     &__list {
         display: grid;
         grid-template-columns: min-content max-content;
         align-items: center;
         grid-column-gap: 2rem;
         grid-row-gap: 5vh;
+
+        @media only screen and (max-width: $break-m) {
+            grid-template-columns: repeat(3, min-content max-content);
+        }
+
+        @media only screen and (max-width: $break-s) {
+            grid-template-columns: min-content max-content;
+        }
     }
 
     &__img {
